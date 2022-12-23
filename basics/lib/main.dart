@@ -55,7 +55,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final contactBook = ContactBook();
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home Screen'),
@@ -63,7 +62,7 @@ class HomeScreen extends StatelessWidget {
       body: ValueListenableBuilder(
         valueListenable: ContactBook(),
         builder: (contact, value, child) {
-          final contacts = value as List<Contact>;
+          final contacts = value;
           return ListView.builder(
             itemCount: contacts.length,
             itemBuilder: (context, index) {
