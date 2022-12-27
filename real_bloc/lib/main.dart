@@ -34,6 +34,7 @@ class HomeScreen extends StatelessWidget {
       create: (context) => AppBloc(
         loginApi: LoginApi(),
         notesApi: NotesApi(),
+        acceptedLoginHandle: const LoginHandle.fooBar(),
       ),
       child: Scaffold(
         appBar: AppBar(
@@ -47,7 +48,6 @@ class HomeScreen extends StatelessWidget {
                 text: pleaseWait,
               );
             } else {
-              print('hide');
               LoadingScreen.instance().hide();
             }
 
