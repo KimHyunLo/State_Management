@@ -63,9 +63,7 @@ class AppBloc extends Bloc<AppAction, AppState> {
           return;
         }
 
-        final notes = await notesApi.getNotes(
-          loginHandle: loginHandle!,
-        );
+        final notes = await notesApi.getNotes(loginHandle: loginHandle!);
         emit(
           AppState(
             isLoading: false,
