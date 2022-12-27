@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:real_bloc/views/home_page.dart';
 
 void main() {
   runApp(
@@ -9,7 +8,20 @@ void main() {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: const HomeScreen(),
     ),
   );
+}
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Home Screen'),
+      ),
+    );
+  }
 }
